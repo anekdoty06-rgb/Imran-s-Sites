@@ -21,6 +21,10 @@ header {
     font-size: 34px;
     color: #d9d9d9;
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
     
 nav {
@@ -85,12 +89,6 @@ p {
 .start-button:hover {
     background-color: #b00000;
     transform: scale(1.05);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
 .logo img {
