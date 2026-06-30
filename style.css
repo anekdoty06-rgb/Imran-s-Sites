@@ -6,6 +6,8 @@ body {
     font-family: "Oswald", sans-serif;
 }
 
+/* ===== Шапка ===== */
+
 header {
     background-color: #1a1a1a;
     border-bottom: 2px solid #8b0000;
@@ -18,25 +20,33 @@ header {
 }
 
 .logo {
-    font-size: 34px;
-    color: #d9d9d9;
-    font-weight: bold;
-
     display: flex;
     align-items: center;
     gap: 12px;
 }
-    
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo span {
+    color: #d9d9d9;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* ===== Меню ===== */
+
 nav {
     display: flex;
-    color: #d9d9d9;
     gap: 35px;
 }
 
 nav a {
     color: #d9d9d9;
-    text-shadow: 0 0 8px #8b0000;
     text-decoration: none;
+    text-shadow: 0 0 8px #8b0000;
     font-size: 22px;
     transition: 0.3s;
 }
@@ -45,29 +55,57 @@ nav a:hover {
     color: #8b0000;
 }
 
-header h2 {
-    color: #d9d9d9;
-    margin: 0;
-    font-size: 32px;
+/* ===== Основной блок ===== */
+
+main {
+    max-width: 1000px;
+    margin: 60px;
 }
+
+/* ===== Заголовки ===== */
 
 h1 {
     color: #8b0000;
     font-size: 50px;
-    margin: 60px 0 20px 60px;
+    margin: 0 0 30px 0;
+    text-align: left;
 }
 
+h2 {
+    color: #8b0000;
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+/* ===== Текст ===== */
+
 p {
-    max-width: 900px;
-    margin: 20px 0 20px 60px;
-    text-align: left;
+    color: #ffffff;
     font-size: 24px;
     line-height: 1.7;
+    margin: 20px 0;
+    text-align: left;
 }
+
+/* ===== Список ===== */
+
+ul {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ===== Кнопка ===== */
 
 .start-button {
     display: inline-block;
-    margin: 40px 0 0 60px;
+    margin-top: 40px;
     padding: 15px 30px;
 
     background-color: #8b0000;
@@ -85,37 +123,4 @@ p {
 .start-button:hover {
     background-color: #b00000;
     transform: scale(1.05);
-}
-
-.logo img {
-    width: 70px;
-    height: 70px;
-}
-
-.logo span {
-    color: #d9d9d9;
-    font-size: 34px;
-    font-weight: bold;
-}
-
-main {
-    max-width: 1000px;
-    margin: 60px;
-}
-
-h2 {
-    color: #8b0000;
-    font-size: 36px;
-    margin-top: 50px;
-}
-
-ul {
-    color: #d9d9d9;
-    font-size: 24px;
-    line-height: 1.8;
-    margin-left: 30px;
-}
-
-li {
-    margin-bottom: 10px;
 }
