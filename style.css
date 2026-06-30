@@ -97,3 +97,25 @@ p {
     font-size: 34px;
     font-weight: bold;
 }
+
+main {
+    max-width: 1000px;
+    margin: 60px;
+}
+
+h2 {
+    color: #8b0000;
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+ul {
+    color: #d9d9d9;
+    font-size: 24px;
+    line-height: 1.8;
+    margin-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
