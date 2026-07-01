@@ -9,14 +9,51 @@ body {
 /* ===== Шапка ===== */
 
 header {
-    background-color: #1a1a1a;
-    border-bottom: 2px solid #8b0000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     padding: 20px 40px;
+
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #8b0000;
+}
+
+.header-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 24px;
+
+    background:#8b0000;
+    color:white;
+
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 0 10px rgba(139,0,0,.4),
+        0 0 20px rgba(139,0,0,.2);
+
+    transition:.3s;
+}
+
+.header-button:hover{
+    background:#b00000;
+    transform:translateY(-2px) scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(176,0,0,.6),
+        0 0 30px rgba(176,0,0,.4);
 }
 
 .logo {
@@ -61,6 +98,9 @@ header {
 nav {
     display: flex;
     gap: 35px;
+
+    margin-left: auto;
+    margin-right: 140px;
 }
 
 nav a {
@@ -97,6 +137,7 @@ nav a:hover {
 
 .hero-code {
     position: relative;
+    overflow: visible;
 
     flex: 1;
     min-width: 500px;
@@ -106,9 +147,18 @@ nav a:hover {
     border: 2px solid #8b0000;
     border-radius: 20px;
 
-    box-shadow: 0 0 35px rgba(139,0,0,.35);
+    box-shadow:
+    0 0 10px #8b0000,
+    0 0 25px #8b0000,
+    0 0 50px #8b0000,
+    0 0 80px rgba(139, 0, 0, 0.7);
 
-    overflow: visible;
+    transition: .4s;
+
+    transform-origin: center center;
+    animation:
+    glow 3.5s ease-in-out infinite,
+    floatWindow 5s ease-in-out infinite alternate;
 }
 
 /* ===== Заголовки ===== */
@@ -215,5 +265,73 @@ li {
     font-size: 20px;
     line-height: 1.8;
     padding: 25px;
+    margin: 0;
+}
+
+
+@keyframes floatWindow {
+    from {
+        transform: rotate(-2deg);
+    }
+
+    to {
+        transform: rotate(2deg);
+    }
+}
+
+/* ===== Статистика ===== */
+
+.stats {
+    max-width: 1400px;
+    margin: 120px auto;
+    padding: 0 60px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.stat-card {
+    flex: 1;
+
+    background: #1a1a1a;
+    border: 2px solid #8b0000;
+    border-radius: 20px;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    box-shadow: 0 0 18px rgba(139,0,0,.25);
+
+    transition: .3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 20px rgba(139,0,0,.45),
+        0 0 35px rgba(139,0,0,.25);
+}
+
+.stat-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.stat-card h2 {
+    font-size: 54px;
+    color: #8b0000;
+    margin: 10px 0;
+}
+
+.stat-card p {
+    font-size: 22px;
+    color: #d9d9d9;
+    text-align: center;
     margin: 0;
 }
